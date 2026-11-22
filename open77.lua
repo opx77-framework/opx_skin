@@ -20,6 +20,7 @@ permissions {
     "network.events",        -- both: menu requests and answers; server: Open77.clothing.set / requestSnapshot
     "database.access",       -- server: opx_skin_outfits (schema at start, loads, writes)
     "player.equipment.read", -- client: Open77.equipment.records / family (garment lists)
+    "http.request", -- server: Open77.http.get (update check, Config.versionCheck)
 }
 
 shared_script "config.lua"
@@ -29,6 +30,7 @@ server_scripts {
     "server/state.lua",
     "server/outfits.lua",
     "server/main.lua",
+    "server/version.lua",
 }
 
 client_script "client/main.lua"
